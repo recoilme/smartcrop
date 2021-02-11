@@ -40,7 +40,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/muesli/smartcrop/options"
+	"github.com/recoilme/smartcrop/options"
 
 	"golang.org/x/image/draw"
 )
@@ -61,13 +61,13 @@ const (
 	skinWeight              = 1.8
 	saturationBrightnessMin = 0.05
 	saturationBrightnessMax = 0.9
-	saturationThreshold     = 0.4
+	saturationThreshold     = 0.9
 	saturationBias          = 0.2
-	saturationWeight        = 0.3
+	saturationWeight        = 0.1
 	scoreDownSample         = 8 // step * minscale rounded down to the next power of two should be good
 	step                    = 8
 	scaleStep               = 0.1
-	minScale                = 0.9
+	minScale                = 1.0
 	maxScale                = 1.0
 	edgeRadius              = 0.4
 	edgeWeight              = -20.0
@@ -110,7 +110,7 @@ type smartcropAnalyzer struct {
 // NewAnalyzer returns a new Analyzer using the given Resizer.
 func NewAnalyzer(resizer options.Resizer) Analyzer {
 	logger := Logger{
-		DebugMode: false,
+		DebugMode: true,
 	}
 
 	return NewAnalyzerWithLogger(resizer, logger)
