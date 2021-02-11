@@ -119,6 +119,7 @@ func NewAnalyzer(resizer options.Resizer) Analyzer {
 // NewAnalyzerWithLogger returns a new analyzer with the given Resizer and Logger.
 func NewAnalyzerWithLogger(resizer options.Resizer, logger Logger) Analyzer {
 	if logger.Log == nil {
+
 		logger.Log = log.New(ioutil.Discard, "", 0)
 	}
 	return &smartcropAnalyzer{Resizer: resizer, logger: logger}
