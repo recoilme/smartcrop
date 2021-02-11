@@ -1,5 +1,5 @@
 smartcrop
-=========
+==========
 
 [![Build Status](https://travis-ci.org/muesli/smartcrop.svg?branch=master)](https://travis-ci.org/muesli/smartcrop)
 [![Coverage Status](https://coveralls.io/repos/github/muesli/smartcrop/badge.svg?branch=master)](https://coveralls.io/github/muesli/smartcrop?branch=master)
